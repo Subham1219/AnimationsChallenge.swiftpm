@@ -13,7 +13,7 @@ struct FlippingView1: View {
         .foregroundColor(.white)
         .clipShape(RoundedRectangle(cornerRadius: 10.0))
         //MARK: Stretch #1 - Part I
-        
+        .rotationEffect(.degrees(currentRotation), anchor: .center)
         
         
         

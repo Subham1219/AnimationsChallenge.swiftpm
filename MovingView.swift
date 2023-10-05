@@ -14,14 +14,36 @@ struct MovingView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10.0))
                 .offset(x: xPosition, y: yPosition)
             //MARK: Stretch #2 
-            
-            
-            
-            
-            
-            
-        }
-        
-    }
-}
-
+            HStack {
+                           Image(systemName: "arrow.right.circle.fill")
+                               .onTapGesture {
+                                   withAnimation {
+                                       xPosition += 50
+                                   }
+                               }
+                           
+                           Image(systemName: "arrow.left.circle.fill")
+                               .onTapGesture {
+                                   withAnimation {
+                                       xPosition -= 50
+                                   }
+                               }
+                           
+                           Image(systemName: "arrow.down.circle.fill")
+                               .onTapGesture {
+                                   withAnimation {
+                                       yPosition += 50
+                                   }
+                               }
+                           
+                           Image(systemName: "arrow.up.circle.fill")
+                               .onTapGesture {
+                                   withAnimation {
+                                       yPosition -= 50
+                                   }
+                               }
+                       }
+                       .padding(.top, 20)
+                   }
+               }
+           }
